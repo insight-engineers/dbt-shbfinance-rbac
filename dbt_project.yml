@@ -1,0 +1,18 @@
+
+# Name your project! Project names should contain only lowercase characters
+# and underscores. A good package name should reflect your organization's
+# name or the intended use of these models
+name: 'dbt_rbac_credit_risk'
+version: '1.0.0'
+
+profile: 'dbt_rbac_credit_risk'
+model-paths: ["models"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dbt_rbac_credit_risk:
+    credit_risk_mart:
+      +materialized: table
